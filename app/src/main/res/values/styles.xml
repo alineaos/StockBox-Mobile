@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="texto_principal">
+        <item name="android:textAlignment">center</item>
+        <item name="android:textColor">@color/azul_logo</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="tv_entrada_produto">
+        <item name="android:textColor">@color/azul_logo</item>
+        <item name="android:textSize">16dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <style name="botao">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">52dp</item>
+        <item name="android:backgroundTint">@color/verde_logo</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textAlignment">center</item>
+        <item name="android:textSize">22dp</item>
+        <item name="android:textStyle">bold</item>
+
+    </style>
+</resources>

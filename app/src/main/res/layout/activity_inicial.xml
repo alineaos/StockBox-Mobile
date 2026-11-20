@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".InicialActivity">
+
+
+    <LinearLayout
+        android:layout_width="373dp"
+        android:layout_height="678dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="45dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:src="@drawable/logostockbox" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bem-vindo de volta, João!"
+            android:textSize="24sp"
+            style="@style/texto_principal" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Como deseja gerenciar o seu estoque hoje?"
+            android:textSize="18sp"
+            style="@style/texto_principal"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/btProdutos"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="PRODUTOS"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btRelatorios"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="RELATÓRIOS"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btSair"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="SAIR"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
