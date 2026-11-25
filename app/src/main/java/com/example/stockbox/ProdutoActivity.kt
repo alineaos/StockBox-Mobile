@@ -34,7 +34,10 @@ class ProdutoActivity : AppCompatActivity() {
         startActivity(telaEntradaProduto)
     }
     private fun saidaProduto() {}
-    private fun contagemProduto() {}
+    private fun contagemProduto() {
+        val telaContagem = Intent(this, ContagemActivity::class.java)
+        startActivity(telaContagem)
+    }
     private fun voltar() {
         finish()
     }

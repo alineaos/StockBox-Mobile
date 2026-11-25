@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ContagemActivity">
+
+    <ScrollView
+        android:layout_width="373dp"
+        android:layout_height="678dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="23dp"
+        android:layout_marginBottom="45dp"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="373dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:layout_marginBottom="20dp"
+                android:src="@drawable/logostockbox" />
+
+            <TextView
+                android:id="@+id/tvExplicacao"
+                style="@style/tv_entrada_produto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:text="Confira a quantidade física de cada produto"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/tvBuscar"
+                style="@style/tv_entrada_produto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Buscar por nome ou código de barras" />
+
+            <!-- Busca -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etBusca"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:background="@android:drawable/editbox_background"
+                    android:ems="10"
+                    android:gravity="center_vertical"
+                    android:hint="Ex: Sofá ou 0001"
+                    android:inputType="text"
+                    android:textColor="@color/cinza_escuro" />
+
+                <Button
+                    android:id="@+id/btBuscar"
+                    style="@style/botao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="48dp"
+                    android:layout_margin="0dp"
+                    android:layout_marginStart="8dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp"
+                    android:minWidth="0dp"
+                    android:paddingHorizontal="14dp"
+                    android:text="Buscar"
+                    android:textSize="14sp"
+                    app:cornerRadius="10dp" />
+            </LinearLayout>
+
+            <!-- Resumo -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="horizontal"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/tvContados"
+                    style="@style/tv_entrada_produto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Contados: 3 de 4"
+                    android:textSize="13sp" />
+
+                <TextView
+                    android:id="@+id/tvDivergencias"
+                    style="@style/tv_entrada_produto"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Divergências: 2"
+                    android:textAlignment="viewEnd"
+                    android:textColor="#7A4A00"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <!-- Produto 1 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNomeProduto1"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Sofá 3 Lugares Retrátil"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvStatus1"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="OK"
+                        android:textColor="#0B5B45"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCodigo1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cód. 0001 · Sistema: 24"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btMenos1"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="-"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+
+                    <EditText
+                        android:id="@+id/etQuantidade1"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="24"
+                        android:textColor="@color/cinza_escuro"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btMais1"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="+"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Produto 2 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNomeProduto2"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Mesa de Jantar 6 Cadeiras"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvStatus2"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="−2 divergência"
+                        android:textColor="#7A4A00"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCodigo2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cód. 0002 · Sistema: 40"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btMenos2"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="-"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+
+                    <EditText
+                        android:id="@+id/etQuantidade2"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="38"
+                        android:textColor="@color/cinza_escuro"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btMais2"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="+"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Produto 3 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNomeProduto3"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Guarda-Roupa 6 Portas"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvStatus3"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="+1 divergência"
+                        android:textColor="#7A4A00"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCodigo3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cód. 0003 · Sistema: 18"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btMenos3"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="-"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+
+                    <EditText
+                        android:id="@+id/etQuantidade3"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:inputType="number"
+                        android:text="19"
+                        android:textColor="@color/cinza_escuro"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btMais3"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="+"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <!-- Produto 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:background="@android:drawable/editbox_background"
+                android:orientation="vertical"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvNomeProduto4"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Cadeira de Escritório"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:id="@+id/tvStatus4"
+                        style="@style/tv_entrada_produto"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pendente"
+                        android:textColor="@color/cinza_escuro"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvCodigo4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Cód. 0004 · Sistema: 30"
+                    android:textColor="@color/cinza_escuro"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btMenos4"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="-"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+
+                    <EditText
+                        android:id="@+id/etQuantidade4"
+                        android:layout_width="0dp"
+                        android:layout_height="55dp"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_weight="1"
+                        android:background="@android:drawable/editbox_background"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="—"
+                        android:inputType="number"
+                        android:text=""
+                        android:textColor="@color/cinza_escuro"
+                        android:textSize="20sp" />
+
+                    <Button
+                        android:id="@+id/btMais4"
+                        style="@style/botao"
+                        android:layout_width="60dp"
+                        android:layout_height="55dp"
+                        android:layout_margin="0dp"
+                        android:insetTop="0dp"
+                        android:insetBottom="0dp"
+                        android:minWidth="0dp"
+                        android:padding="0dp"
+                        android:text="+"
+                        android:textSize="20sp"
+                        app:cornerRadius="10dp" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/btFinalizarContagem"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:layout_marginTop="10dp"
+                android:text="Finalizar Contagem"
+                android:textSize="15sp"
+                app:cornerRadius="10dp" />
+
+            <Button
+                android:id="@+id/btVoltar"
+                style="@style/botao"
+                android:layout_width="match_parent"
+                android:layout_height="55dp"
+                android:text="Voltar"
+                android:textSize="15sp"
+                app:cornerRadius="10dp" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
